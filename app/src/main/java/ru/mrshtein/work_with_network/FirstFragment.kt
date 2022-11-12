@@ -9,11 +9,8 @@ import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import org.koin.android.ext.android.get
 import org.koin.android.ext.android.inject
 import ru.mrshtein.network.NetworkService
-import ru.mrshtein.network.provideNetworkService
-import ru.mrshtein.network.provideRetrofit
 import ru.mrshtein.work_with_network.databinding.FragmentFirstBinding
 
 /**
@@ -48,8 +45,8 @@ class FirstFragment : Fragment() {
         binding.loadBtn.setOnClickListener {
 
             CoroutineScope(Dispatchers.Main).launch {
-                val types = retrofitService.getAnimalsTypes()
-                binding.testText.text = types.body()?.get(0)?.pluralAnimalType
+                val types = retrofitService.getCatsFact()
+                binding.testText.text = types.body()?.fact
             }
         }
 

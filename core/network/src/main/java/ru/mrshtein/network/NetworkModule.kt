@@ -14,7 +14,7 @@ val networkModule: Module = module {
 
 fun provideRetrofit(): Retrofit =
     Retrofit.Builder()
-        .baseUrl("http://10.0.2.2:8881")
+        .baseUrl("https://catfact.ninja")
         .addConverterFactory(ScalarsConverterFactory.create())
         .addConverterFactory(
             GsonConverterFactory.create(
