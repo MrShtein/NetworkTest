@@ -11,29 +11,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/test_text" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"/>
 
     <Button
         android:id="@+id/load_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Загрузить контент"
-        app:layout_constraintTop_toBottomOf="@id/button_first"
+        android:text="Load content"
+        app:layout_constraintTop_toBottomOf="@id/test_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

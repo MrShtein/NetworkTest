@@ -38,12 +38,7 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-        }
-
         binding.loadBtn.setOnClickListener {
-
             CoroutineScope(Dispatchers.Main).launch {
                 val types = retrofitService.getCatsFact()
                 binding.testText.text = types.body()?.fact
